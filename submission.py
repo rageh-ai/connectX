@@ -1,6 +1,3 @@
-import numpy as np
-
-
 def count_window(grid, player, window_size):
 
   num_windows = 0
@@ -82,7 +79,7 @@ def minimax(grid, col_index, depth, maximizingPlayer, player, configuration):
     if count_window(grid, player%2+1, configuration.inarow) > 0:
         return -10000 if maximizingPlayer else 10000
     if depth == 0 or np.all(grid != 0):
-        return score_move(grid, observation.mark)
+        return score_move(grid, player%2+1)
 
     # Recursive minimax calls
     if maximizingPlayer:
