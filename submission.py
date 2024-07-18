@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def count_window(grid, player, window_size):
 
   num_windows = 0
